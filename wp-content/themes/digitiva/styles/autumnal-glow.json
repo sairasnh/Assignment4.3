@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "Autumnal Glow",
+	"settings": {
+		"color": {
+			"gradients": [
+				{
+					"gradient": "linear-gradient(90deg, #ef8828 0%, #c75f00 100%);",
+					"name": "Main gradiant",
+					"slug": "custom-main-gradiant"
+				}
+			],
+			"palette": [
+				{
+					"color": "#00296b",
+					"name": "Background Color",
+					"slug": "custom-background-color"
+				},
+				{
+					"color": "#fdfdfd",
+					"name": "Text Color",
+					"slug": "custom-text-color"
+				},
+				{
+					"color": "#ef8828",
+					"name": "Primary",
+					"slug": "custom-primary"
+				}
+			]
+		}
+	}
+}

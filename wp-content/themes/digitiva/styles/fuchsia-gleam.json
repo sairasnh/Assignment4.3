@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "Fuchsia Gleam",
+	"settings": {
+		"color": {
+			"gradients": [
+				{
+					"gradient": "linear-gradient(90deg, #8f2d56 0%, #d1105a 35%, #ba2c73 100%);",
+					"name": "Main gradiant",
+					"slug": "custom-main-gradiant"
+				}
+			],
+			"palette": [
+				{
+					"color": "#282f44",
+					"name": "Background Color",
+					"slug": "custom-background-color"
+				},
+				{
+					"color": "#fdfdfd",
+					"name": "Text Color",
+					"slug": "custom-text-color"
+				},
+				{
+					"color": "#d1105a",
+					"name": "Primary",
+					"slug": "custom-primary"
+				}
+			]
+		}
+	}
+}

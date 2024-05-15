@@ -1,0 +1,370 @@
+/*
+Theme Name: Digitiva
+Theme URI: https://effethemes.site/themes/digitiva-wordpress-theme/
+Author: Effe Themes
+Author URI: https://effethemes.site/
+Description: Digitiva is a cutting-edge WordPress theme designed specifically for digital marketing agency, design agency and branding agency. With its sleek and clean design, Digitiva empowers you to showcase your services, portfolio, and team in style. With a focus on modernity, intuitiveness, and cleanliness, Digitiva encapsulates everything a professional theme should offer. Its responsive design ensures a seamless experience across various devices, enhancing user engagement and satisfaction. Digitiva features an exceptionally user-friendly design, ensuring effortless operation for users of all levels, from seasoned professionals to beginners. Say goodbye to the complexities of professional coding skills – with Digitiva, managing your website is a breeze for everyone.
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 5.7
+Version: 1.0.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: digitiva
+Tags: blog, news, portfolio, grid-layout, one-column, two-columns,  block-patterns, block-styles, style-variations, translation-ready, custom-header, full-site-editing
+*/
+
+/* ================= > General Styles < ================= */
+
+body {
+  background: var(--wp--preset--color--custom-background-color);
+  color: var(--wp--preset--color--custom-text-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  border-radius: 40px;
+}
+
+.full-width-image > img {
+  width: 100% !important;
+}
+
+/* ================= > Global Components < ================= */
+
+.container-with-gradient-border-radius,
+:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) {
+  position: relative;
+}
+
+.container-with-gradient-border-radius::before,
+:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 40px; 
+  padding: 3px; 
+  background: var(--wp--preset--gradient--custom-main-gradiant);
+  -webkit-mask: 
+     -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) content-box, 
+     -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+  pointer-events: none;
+}
+
+:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) {
+  border: 0;
+  padding: 1px;
+}
+
+.gradient-text {
+  background: var(--wp--preset--gradient--custom-main-gradiant);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.social-icons > li > a {
+  padding: 0.5rem !important;
+  font-size: 23px !important;
+}
+
+/* ================= > Header < ================= */
+
+.text-logo > a {
+  font-size: 23px;
+}
+
+.wp-block-navigation:not(.has-background)
+.wp-block-navigation__responsive-container.is-menu-open {
+  background-color: var(--wp--preset--color--custom-background-color) !important;
+  color: var(--wp--preset--color--custom-text-color) !important;
+}
+
+.wp-block-navigation__responsive-container-content {
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.header-button > a {
+  word-break: auto-phrase;
+}
+
+/* ================= > Our Services < ================= */
+
+.our-services-head {
+  padding: 0 !important;
+  padding-right: 80px !important;
+}
+
+/* ================= > Blog < ================= */
+
+.pagination {
+  gap: 8px;
+}
+
+.pagination > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.current {
+  color: var(--wp--preset--color--custom-primary);
+}
+
+.post-author > div > img {
+  width: 96px;
+  height: 96px;
+  border-radius: 20px;
+}
+
+.post-comments > ol > li > div > div {
+  padding-right: 8px;
+}
+
+.post-comments > ol > li > div > div > .wp-block-comment-reply-link > a {
+  background: var(--wp--preset--gradient--custom-main-gradiant);
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.post-comments > div > form > p > textarea,
+.post-password-form > p > label > input {
+   color: var(--wp--preset--color--custom-text-color);
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--wp--preset--color--custom-background-color)), to(var(--wp--preset--color--custom-background-color))) padding-box, var(--wp--preset--gradient--custom-main-gradiant) border-box;
+  border-radius: 20px;
+  border: transparent 3px solid;
+  margin-top: 8px;
+}
+
+.post-password-form > p > label > input {
+  padding: 8px 16px;
+}
+
+.search-input > div > input {
+  color: var(--wp--preset--color--custom-text-color);
+  background: transparent;
+  padding: 16px;
+}
+
+.post-comments > div > form > p > textarea:active,
+.post-comments > div > form > p > textarea:focus,
+.search-input > div > input:active,
+.search-input > div > input:focus {
+ line-height: 1.6;
+}
+
+.search-input > div > button {
+  border-radius: 0px 40px 40px 0px;
+}
+
+.post-comments > div > form > p > #submit,
+.search-input > div > button,
+.wp-block-file__button,
+.post-password-form > p > input[type=submit] {
+  background: var(--wp--preset--gradient--custom-main-gradiant);
+}
+
+.post-password-form > p > input[type=submit] {
+  padding: 8px 24px;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.post-password-form > p > input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+.post-comments > div > form > p > #submit:hover,
+.search-input > div > button:hover {
+  opacity: 0.8;
+}
+
+/* ================= > Media Queries < ================= */
+
+@media (max-width: 1400px) {
+  body {
+    --wp--preset--spacing--container: 200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    --wp--preset--spacing--container: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: auto;
+    background-color: inherit;
+  }
+
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close,
+  .wp-block-navigation__responsive-container-open:not(.always-shown),
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    display: none;
+  }
+
+  .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
+    left: 0;
+  }
+
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .text-width-30 {
+    max-width: 100% !important;
+  }
+
+  .our-services-head {
+    padding-right: 0px !important;
+  }
+
+  .columns-with-title-on-the-side {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .wp-block-columns {
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+  }
+
+  .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+    -ms-flex-preferred-size: 35% !important;
+        flex-basis: 35% !important;
+  }
+
+  .blog-sidebar-on-left-columns,
+  .blog-sidebar-on-right-columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+  }
+
+  .blog-sidebar-on-left-columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .blog-sidebar-on-right-columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .wp-block-avatar-column {
+    max-width: 40px;
+  }
+
+  .footer-1-vertical-col,
+  .footer-2-vertical-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer-1-vertical-col {
+    gap: 20px;
+  }
+
+  .footer-1-vertical-col > div > h4,
+  .footer-1-vertical-col > div > h5 {
+    text-align: center;
+  }
+
+  .footer-navigation-links > ul {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+
+  .social-icons {
+    padding-top: 24px;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+
+  .footer-copyright-columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-copyright-columns > div > p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 781px) {
+  .header-col-2 > div {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    padding-top: 20px;
+  }
+
+  .header-columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .header-logo {
+    -moz-text-align-last: center;
+         text-align-last: center;
+  }
+}
+
+@media (max-width: 465px) {
+  body {
+    --wp--preset--spacing--container: 40px;
+  }
+}
