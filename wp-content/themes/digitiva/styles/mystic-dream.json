@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "Mystic Dream",
+	"settings": {
+		"color": {
+			"gradients": [
+				{
+					"gradient": "linear-gradient(90deg, #3c096c 0%, #5a189a 35%, #9d4edd 70%, #7b2cbf 100%);",
+					"name": "Main gradiant",
+					"slug": "custom-main-gradiant"
+				}
+			],
+			"palette": [
+				{
+					"color": "#121212",
+					"name": "Background Color",
+					"slug": "custom-background-color"
+				},
+				{
+					"color": "#fdfdfd",
+					"name": "Text Color",
+					"slug": "custom-text-color"
+				},
+				{
+					"color": "#7b2cbf",
+					"name": "Primary",
+					"slug": "custom-primary"
+				}
+			]
+		}
+	}
+}

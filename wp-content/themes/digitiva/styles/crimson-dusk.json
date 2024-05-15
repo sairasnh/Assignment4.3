@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "Crimson Dusk",
+	"settings": {
+		"color": {
+			"gradients": [
+				{
+					"gradient": "linear-gradient(90deg, #410511 0%, #640d14 35%, #800e13 70%, #ad2831 100%);",
+					"name": "Main gradiant",
+					"slug": "custom-main-gradiant"
+				}
+			],
+			"palette": [
+				{
+					"color": "#121212",
+					"name": "Background Color",
+					"slug": "custom-background-color"
+				},
+				{
+					"color": "#fdfdfd",
+					"name": "Text Color",
+					"slug": "custom-text-color"
+				},
+				{
+					"color": "#ad2831",
+					"name": "Primary",
+					"slug": "custom-primary"
+				}
+			]
+		}
+	}
+}
